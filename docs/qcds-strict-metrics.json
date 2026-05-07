@@ -191,7 +191,7 @@
           "description": "docs ZIPが生成済みである",
           "kind": "zip",
           "pass": true,
-          "detail": "log-error-repair-panel-docs.zip 9996 bytes"
+          "detail": "log-error-repair-panel-docs.zip exists and exceeds minimum size"
         }
       ]
     },

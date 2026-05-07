@@ -36,7 +36,7 @@ Overall: S+ (100)
 - [x] ローカル実行手順がある - ok
 - [x] 代表サンプルがある - ok
 - [x] 機械可読metricsが生成される - metrics generated
-- [x] docs ZIPが生成済みである - log-error-repair-panel-docs.zip 9996 bytes
+- [x] docs ZIPが生成済みである - log-error-repair-panel-docs.zip exists and exceeds minimum size
 
 ### Delivery
 
