@@ -1,0 +1,120 @@
+{
+  "product": "log-error-repair-panel",
+  "title": "ログ・エラー修復パネル",
+  "benchmarkRepos": [
+    "Sunmax0731/movie-telop-transcriber",
+    "Sunmax0731/codex-remote-android"
+  ],
+  "requiredFields": [
+    "logPath",
+    "errorSignature",
+    "severity",
+    "repairAction"
+  ],
+  "scenarios": [
+    {
+      "id": "happy-path",
+      "purpose": "ログ、エラー署名、重要度、修復アクションの正常入力を確認する",
+      "input": {
+        "items": [
+          {
+            "id": "log-error-repair-panel-happy",
+            "title": "ログ・エラー修復パネル happy",
+            "logPath": "logs/sample.log",
+            "errorSignature": "E_SAMPLE",
+            "severity": "warning",
+            "repairAction": "設定値を確認する",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "passed",
+        "errors": 0,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "missing-required",
+      "purpose": "必須項目不足をerrorとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "log-error-repair-panel-missing-required",
+            "title": "ログ・エラー修復パネル missing-required",
+            "errorSignature": "E_SAMPLE",
+            "severity": "warning",
+            "repairAction": "設定値を確認する",
+            "status": "ready"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 0
+      }
+    },
+    {
+      "id": "blocked-status",
+      "purpose": "blocked状態をwarningとして検出する",
+      "input": {
+        "items": [
+          {
+            "id": "log-error-repair-panel-blocked",
+            "title": "ログ・エラー修復パネル blocked",
+            "logPath": "logs/sample.log",
+            "errorSignature": "E_SAMPLE",
+            "severity": "warning",
+            "repairAction": "設定値を確認する",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "warning",
+        "errors": 0,
+        "warnings": 1
+      }
+    },
+    {
+      "id": "mixed-batch",
+      "purpose": "正常、必須不足、警告を同一バッチで集計する",
+      "input": {
+        "items": [
+          {
+            "id": "log-error-repair-panel-happy",
+            "title": "ログ・エラー修復パネル happy",
+            "logPath": "logs/sample.log",
+            "errorSignature": "E_SAMPLE",
+            "severity": "warning",
+            "repairAction": "設定値を確認する",
+            "status": "ready"
+          },
+          {
+            "id": "log-error-repair-panel-missing-required",
+            "title": "ログ・エラー修復パネル missing-required",
+            "errorSignature": "E_SAMPLE",
+            "severity": "warning",
+            "repairAction": "設定値を確認する",
+            "status": "ready"
+          },
+          {
+            "id": "log-error-repair-panel-blocked",
+            "title": "ログ・エラー修復パネル blocked",
+            "logPath": "logs/sample.log",
+            "errorSignature": "E_SAMPLE",
+            "severity": "warning",
+            "repairAction": "設定値を確認する",
+            "status": "blocked"
+          }
+        ]
+      },
+      "expected": {
+        "result": "failed",
+        "errors": 1,
+        "warnings": 1
+      }
+    }
+  ]
+}
