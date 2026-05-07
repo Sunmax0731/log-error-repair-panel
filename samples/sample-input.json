@@ -2,7 +2,7 @@
   "items": [
     {
       "id": "log-error-repair-panel-1",
-      "title": "ログ・エラー修復パネル サンプル 1",
+      "title": "ログ・エラー修復パネル サンプル1",
       "status": "ready",
       "logPath": "logs/sample.log",
       "errorSignature": "E_SAMPLE",

@@ -1,7 +1,7 @@
 export const productConfig = {
   "repo": "log-error-repair-panel",
   "titleJa": "ログ・エラー修復パネル",
-  "summary": "ログから修復候補へつなぐ導線",
+  "summary": "ログ、エラー署名、重要度、修復アクションをまとめ、次の修正判断につなげる。",
   "requiredFields": [
     "logPath",
     "errorSignature",

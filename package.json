@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": false,
   "type": "module",
-  "description": "ログ、エラー署名、重大度、修復候補を整理し、修復判断を支援する。",
+  "description": "ログ、エラー署名、重要度、修復アクションをまとめ、次の修正判断につなげる。",
   "scripts": {
     "test": "node --test tests/*.test.mjs && node tools/qcds-evaluate.mjs",
     "validate": "npm test",
@@ -12,7 +12,9 @@
   "keywords": [
     "projectmanagement",
     "log-repair",
-    "mvp"
+    "mvp",
+    "qcds",
+    "pre-release"
   ],
   "license": "MIT"
 }

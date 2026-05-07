@@ -4,8 +4,9 @@ import { analyzeItems, renderMarkdownReport } from '../src/core.mjs';
 
 test('valid sample passes required field checks', () => {
   const report = analyzeItems({ items: [{
-  "id": "log-repair-1",
-  "title": "ログ・エラー修復パネル サンプル 1",
+  "id": "log-error-repair-panel-1",
+  "title": "ログ・エラー修復パネル サンプル1",
+  "status": "ready",
   "logPath": "logs/sample.log",
   "errorSignature": "E_SAMPLE",
   "severity": "warning",
@@ -17,8 +18,9 @@ test('valid sample passes required field checks', () => {
 
 test('missing required field is reported', () => {
   const report = analyzeItems({ items: [{
-  "id": "log-repair-missing-required",
+  "id": "log-error-repair-panel-missing-required",
   "title": "必須項目不足サンプル",
+  "status": "ready",
   "errorSignature": "E_SAMPLE",
   "severity": "warning",
   "repairAction": "設定値を確認する"
