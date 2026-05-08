@@ -1,0 +1,32 @@
+{
+  "product": "log-error-repair-panel",
+  "repository": "Sunmax0731/log-error-repair-panel",
+  "githubUrl": "https://github.com/Sunmax0731/log-error-repair-panel",
+  "tag": "v0.1.0-alpha.1",
+  "releaseUrl": "https://github.com/Sunmax0731/log-error-repair-panel/releases/tag/v0.1.0-alpha.1",
+  "prerelease": true,
+  "latest": false,
+  "assetCount": 3,
+  "assets": [
+    "log-error-repair-panel-docs.zip",
+    "manual-test.md",
+    "strict-manual-test-addendum.md"
+  ],
+  "platformRuntimeGate": "dist/platform-runtime-gate-result.json",
+  "platformType": "cli-release-tool",
+  "manualTest": "not-run-by-codex",
+  "qcdsEvaluation": {
+    "Quality": "S-",
+    "Cost": "S-",
+    "Delivery": "S-",
+    "Satisfaction": "S-",
+    "capReason": "manual-test-not-run-by-codex"
+  },
+  "github": {
+    "repo": "Sunmax0731/log-error-repair-panel",
+    "url": "https://github.com/Sunmax0731/log-error-repair-panel",
+    "releaseUrl": "https://github.com/Sunmax0731/log-error-repair-panel/releases/tag/v0.1.0-alpha.1",
+    "prerelease": true,
+    "latest": false
+  }
+}
